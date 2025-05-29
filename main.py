@@ -16,7 +16,8 @@ if not OPENWEATHER_API_KEY or not TOMTOM_API_KEY:
 app = FastAPI(
     title="Weather & Traffic MCP",
     version="1.0.0",
-    description="Fetch current weather (OpenWeather) and live traffic (TomTom) by lat/lon"
+    description="Fetch current weather (OpenWeather) and live traffic (TomTom) by lat/lon",
+    servers=[{"url": "http://localhost:8000"}]
 )
 
 class Location(BaseModel):
