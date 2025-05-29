@@ -17,7 +17,7 @@ app = FastAPI(
     title="Weather & Traffic MCP",
     version="1.0.0",
     description="Fetch current weather (OpenWeather) and live traffic (TomTom) by lat/lon",
-    servers=[{"url": "http://localhost:8000"}]
+    servers=[{"url": "http://host.docker.internal:8000"}]
 )
 
 class Location(BaseModel):
